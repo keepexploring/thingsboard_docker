@@ -3,7 +3,7 @@ Creating a thingsboard instance with the postgres database in a separate contain
 Install the above
 
 Install docker image of timescaledb
-sudo docker run -d --name thingsboard-timescaledb -p 5433:5432 timescale/timescaledb
+sudo docker run -d --name thingsboard-timescaledb -p 5433:5432 timescale/timescaledb --restart unless-stopped
 see https://github.com/timescale/timescaledb-docker for more info (I've just changed the exposed port on the host)
 
 now cd into the folder with the docker files from the repro in and run
